@@ -1,1 +1,81 @@
-Hello World
+{% extends "layout.html" %}
+
+{% block title %}
+    Active postings and bids
+{% endblock %}
+
+{% block main %}
+    <table class="table table-striped">
+        <caption>Your active postings</caption>
+        <thead>
+            <tr>
+                <th>Restaurant</th>
+                <th>Address</th>
+                <th>Table for...</th>
+                <th>Time</th>
+                <th>Date</th>
+                <th>Asking price</th>
+                <th>Offers</th>
+                <th>Select</th>
+            </tr>
+        </thead>
+        <form action="/" method="post">
+        <tbody>
+            {% for posting in postings %}
+                <tr>
+                    <td>{{ posting.restaurant_name }}</td>
+                    <td>{{ posting.address }}</td>
+                    <td>{{ posting.num_people }}</td>
+                    <td>{{ posting.reservation_for }}</td>
+                    <td>{{ posting.date_of_res }}</td>
+                    <td>{{ posting.asking_price | usd }}</td>
+                    <td>{{ posting.total}}</td>
+                    <td><input class="form-check-input" type = "radio" name = "offers" value = "{{ posting.posting_id }}"></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div class="form-group">
+        <button class="btn btn-primary" type="submit" name="submit_button" value="review">Review offers for selected posting</button>
+        <button class="btn btn-primary" type="submit" name="submit_button" value="manage_asking">Manage asking price for selected posting</button>
+    </div>
+
+    <p></p>
+    <p></p>
+
+    <table class="table table-striped">
+        <caption>Your active bids</caption>
+        <thead>
+            <tr>
+                <th>Restaurant</th>
+                <th>Address</th>
+                <th>Table for...</th>
+                <th>Time</th>
+                <th>Date</th>
+                <th>Their asking price</th>
+                <th>Your bid</th>
+                <th>Result</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for bid in bids %}
+                <tr>
+                    <td>{{ bid.restaurant_name }}</td>
+                    <td>{{ bid.address}}</td>
+                    <td>{{ bid.num_people }}</td>
+                    <td>{{ bid.reservation_for }}</td>
+                    <td>{{ bid.date_of_res }}</td>
+                    <td>{{ bid.asking_price | usd }}</td>
+                    <td>{{ bid.bid | usd}}</td>
+                    <td>{{ bid.accepted }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div class="form-group">
+        <button class="btn btn-primary" type="submit" name="submit_button" value="remove">Remove accepted and declined from list</button>
+        <button class="btn btn-primary" type="submit" name="submit_button" value="manage_co">Manage counteroffers</button>
+    </div>
+
+    </form>
+{% endblock %}
