@@ -1,81 +1,48 @@
-{% extends "layout.html" %}
+<!DOCTYPE html>
 
-{% block title %}
-    Active postings and bids
-{% endblock %}
+<html lang="en">
 
-{% block main %}
-    <table class="table table-striped">
-        <caption>Your active postings</caption>
-        <thead>
-            <tr>
-                <th>Restaurant</th>
-                <th>Address</th>
-                <th>Table for...</th>
-                <th>Time</th>
-                <th>Date</th>
-                <th>Asking price</th>
-                <th>Offers</th>
-                <th>Select</th>
-            </tr>
-        </thead>
-        <form action="/" method="post">
-        <tbody>
-            {% for posting in postings %}
-                <tr>
-                    <td>{{ posting.restaurant_name }}</td>
-                    <td>{{ posting.address }}</td>
-                    <td>{{ posting.num_people }}</td>
-                    <td>{{ posting.reservation_for }}</td>
-                    <td>{{ posting.date_of_res }}</td>
-                    <td>{{ posting.asking_price | usd }}</td>
-                    <td>{{ posting.total}}</td>
-                    <td><input class="form-check-input" type = "radio" name = "offers" value = "{{ posting.posting_id }}"></td>
-                </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-    <div class="form-group">
-        <button class="btn btn-primary" type="submit" name="submit_button" value="review">Review offers for selected posting</button>
-        <button class="btn btn-primary" type="submit" name="submit_button" value="manage_asking">Manage asking price for selected posting</button>
-    </div>
+    <head>
 
-    <p></p>
-    <p></p>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <table class="table table-striped">
-        <caption>Your active bids</caption>
-        <thead>
-            <tr>
-                <th>Restaurant</th>
-                <th>Address</th>
-                <th>Table for...</th>
-                <th>Time</th>
-                <th>Date</th>
-                <th>Their asking price</th>
-                <th>Your bid</th>
-                <th>Result</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for bid in bids %}
-                <tr>
-                    <td>{{ bid.restaurant_name }}</td>
-                    <td>{{ bid.address}}</td>
-                    <td>{{ bid.num_people }}</td>
-                    <td>{{ bid.reservation_for }}</td>
-                    <td>{{ bid.date_of_res }}</td>
-                    <td>{{ bid.asking_price | usd }}</td>
-                    <td>{{ bid.bid | usd}}</td>
-                    <td>{{ bid.accepted }}</td>
-                </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-    <div class="form-group">
-        <button class="btn btn-primary" type="submit" name="submit_button" value="remove">Remove accepted and declined from list</button>
-        <button class="btn btn-primary" type="submit" name="submit_button" value="manage_co">Manage counteroffers</button>
-    </div>
+        <!-- documentation at http://getbootstrap.com/docs/4.1/, alternative themes at https://bootswatch.com/ -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
 
-    </form>
-{% endblock %}
+        <!-- https://favicon.io/emoji-favicons/money-mouth-face/ -->
+        <link href="/static/favicon.ico" rel="icon">
+
+        <link href="/static/styles.css" rel="stylesheet">
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+        <title>Dustin Swonder: Home</title>
+
+    </head>
+
+    <body>
+
+        <nav class="navbar navbar-expand-md navbar-light bg-light border">
+            <a class="navbar-brand" href="/"><span class="grey">Dustin Swonder</span></a>
+            <button aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbar" data-toggle="collapse" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="navbar-nav mr-auto mt-2">
+                    <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/CV">Sell</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <main class="container p-5">
+            {% block main %}{% endblock %}
+        </main>
+
+    </body>
+
+</html>
