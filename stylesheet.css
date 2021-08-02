@@ -88,32 +88,32 @@ th,
 tr,
 p,
 a {
-  font-family: 'Jost', sans-serif;
+  font-family: 'EB Garamond', serif;
   /*font-family: 'Lato', Verdana, Helvetica, sans-serif;*/
   font-size: 14px
 }
 
 strong {
-  font-family: 'Jost', sans-serif;
+  font-family: 'EB Garamond', serif;
   /*font-family: 'Lato', Verdana, Helvetica, sans-serif;*/
   font-size: 14px;
 }
 
 heading {
-  font-family: 'Jost', sans-serif;
+  font-family: 'EB Garamond', serif;
   /*font-family: 'Lato', Verdana, Helvetica, sans-serif;*/
   font-size: 22px;
 }
 
 papertitle {
-  font-family: 'Jost', sans-serif;
+  font-family: 'EB Garamond', serif;
   /*font-family: 'Lato', Verdana, Helvetica, sans-serif;*/
   font-size: 14px;
   font-weight: 700
 }
 
 name {
-  font-family: 'Jost', sans-serif;
+  font-family: 'EB Garamond', serif;
   /*font-family: 'Lato', Verdana, Helvetica, sans-serif;*/
   font-size: 32px;
 }
