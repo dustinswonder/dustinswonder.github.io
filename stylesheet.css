@@ -1,3 +1,11 @@
+/* jost */
+@font-face{
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 400;
+  src:  local('Jost'), url(https://fonts.gstatic.com/s/jost/v15/S6u9w4BMUTPHh6UVSwaPGQ3q5d0N7w.woff2);
+}
+
 /* latin-ext */
 @font-face {
   font-family: 'Lato';
