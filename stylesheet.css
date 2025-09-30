@@ -1,77 +1,31 @@
-/* Import Roboto and Roboto Slab from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap');
-
-a {
-  color: #1772d0;
-  text-decoration: none;
-}
-
-a:focus,
-a:hover {
-  color: #f09228;
-  text-decoration: none;
-}
-
-/* Body text */
-body,
-td,
-th,
-tr,
-p,
-a {
-  font-family: 'Roboto', sans-serif;
+/* --- Typography: Roboto (body) + Roboto Slab (headings) --- */
+html, body {
+  font-family: 'Roboto', system-ui, -apple-system, 'Segoe UI', Arial, Helvetica, sans-serif;
   font-size: 14px;
+  font-synthesis: none;
 }
 
-strong {
-  font-family: 'Roboto', sans-serif;
-  font-size: 14px;
-}
+a { color: #1772d0; text-decoration: none; }
+a:focus, a:hover { color: #f09228; text-decoration: none; }
 
-/* Headings (both standard HTML and custom tags) */
+p, td, th, tr, a, strong, em, span { font-family: inherit; }
+
+/* Apply Roboto Slab to all headings AND your custom tags */
 h1, h2, h3, h4, h5, h6,
-name,
-heading,
-papertitle {
-  font-family: 'Roboto Slab', serif;
+name, heading, papertitle {
+  font-family: 'Roboto Slab', 'Roboto', serif;
+  line-height: 1.25;
+  letter-spacing: 0.01em;
 }
 
-h1, name {
-  font-size: 32px;
-}
+/* Sizes to match your layout */
+name, h1 { font-size: 32px; display: block; margin: 0 0 .5rem; }
+heading, h2 { font-size: 22px; display: block; margin: 1.75rem 0 .5rem; }
+papertitle { font-size: 14px; font-weight: 700; display: block; }
 
-h2, heading {
-  font-size: 22px;
-}
+/* Image helpers (unchanged) */
+.one { width:160px; height:160px; position:relative; }
+.two { width:160px; height:160px; position:absolute; transition:opacity .2s ease-in-out; -moz-transition:opacity .2s ease-in-out; -webkit-transition:opacity .2s ease-in-out; }
+.fade { transition:opacity .2s ease-in-out; -moz-transition:opacity .2s ease-in-out; -webkit-transition:opacity .2s ease-in-out; }
 
-papertitle {
-  font-size: 14px;
-  font-weight: 700;
-}
-
-/* Image containers */
-.one {
-  width: 160px;
-  height: 160px;
-  position: relative;
-}
-
-.two {
-  width: 160px;
-  height: 160px;
-  position: absolute;
-  transition: opacity .2s ease-in-out;
-  -moz-transition: opacity .2s ease-in-out;
-  -webkit-transition: opacity .2s ease-in-out;
-}
-
-.fade {
-  transition: opacity .2s ease-in-out;
-  -moz-transition: opacity .2s ease-in-out;
-  -webkit-transition: opacity .2s ease-in-out;
-}
-
-/* Highlighting */
-span.highlight {
-  background-color: #ffffd0;
-}
+span.highlight { background-color:#ffffd0; }
