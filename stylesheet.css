@@ -1,9 +1,9 @@
-/* jost */
-@font-face{
-  font-family: 'Jost';
+/* roboto */
+@font-face {
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
-  src:  local('Jost'), url(https://fonts.gstatic.com/s/jost/v15/S6u9w4BMUTPHh6UVSwaPGQ3q5d0N7w.woff2);
+  src: local('Roboto'), url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Me4Ww.woff2) format('woff2');
 }
 
 /* latin-ext */
@@ -88,33 +88,28 @@ th,
 tr,
 p,
 a {
-  font-family: 'Jost', sans-serif;
-  /*font-family: 'Lato', Verdana, Helvetica, sans-serif;*/
+  font-family: 'Roboto', sans-serif;
   font-size: 14px
 }
 
 strong {
-  font-family: 'Jost', sans-serif;
-  /*font-family: 'Lato', Verdana, Helvetica, sans-serif;*/
+  font-family: 'Roboto', sans-serif;
   font-size: 14px;
 }
 
 heading {
-  font-family: 'Jost', sans-serif;
-  /*font-family: 'Lato', Verdana, Helvetica, sans-serif;*/
+  font-family: 'Roboto', sans-serif;
   font-size: 22px;
 }
 
 papertitle {
-  font-family: 'Jost', sans-serif;
-  /*font-family: 'Lato', Verdana, Helvetica, sans-serif;*/
+  font-family: 'Roboto', sans-serif;
   font-size: 14px;
   font-weight: 700
 }
 
 name {
-  font-family: 'Jost', sans-serif;
-  /*font-family: 'Lato', Verdana, Helvetica, sans-serif;*/
+  font-family: 'Roboto', sans-serif;
   font-size: 32px;
 }
 
