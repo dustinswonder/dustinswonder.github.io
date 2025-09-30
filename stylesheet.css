@@ -1,31 +1,97 @@
-/* --- Typography: Roboto (body) + Roboto Slab (headings) --- */
+/* ===========================
+   Typography
+   =========================== */
 html, body {
   font-family: 'Roboto', system-ui, -apple-system, 'Segoe UI', Arial, Helvetica, sans-serif;
-  font-size: 14px;
-  font-synthesis: none;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #111;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a { color: #1772d0; text-decoration: none; }
-a:focus, a:hover { color: #f09228; text-decoration: none; }
+a:hover, a:focus { color: #f09228; text-decoration: none; }
 
-p, td, th, tr, a, strong, em, span { font-family: inherit; }
-
-/* Apply Roboto Slab to all headings AND your custom tags */
+/* Headings (standard + custom tags) */
 h1, h2, h3, h4, h5, h6,
 name, heading, papertitle {
   font-family: 'Roboto Slab', 'Roboto', serif;
   line-height: 1.25;
   letter-spacing: 0.01em;
+  color: #111;
+  margin: 0 0 .6rem 0;
 }
 
-/* Sizes to match your layout */
-name, h1 { font-size: 32px; display: block; margin: 0 0 .5rem; }
-heading, h2 { font-size: 22px; display: block; margin: 1.75rem 0 .5rem; }
-papertitle { font-size: 14px; font-weight: 700; display: block; }
+name, h1 { font-size: 2.25rem; font-weight: 700; display: block; }
+heading, h2 { font-size: 1.5rem; font-weight: 700; display: block; margin-top: 2rem; }
+papertitle { font-size: 1rem; font-weight: 700; display: inline; }
 
-/* Image helpers (unchanged) */
+/* Body text */
+p, td, th, tr, strong, em, span {
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+/* ===========================
+   Layout
+   =========================== */
+.wrap {
+  max-width: 980px;
+  margin: 40px auto 80px;
+  padding: 0 20px;
+}
+
+.intro {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.intro-text .links { margin-top: .75rem; }
+.sep { margin: 0 .5rem; color: #888; }
+
+/* Headshot */
+.intro-photo {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.intro-photo img {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #e8e8e8;
+}
+
+/* Paper links */
+.paperlink a { font-weight: 700; }
+
+/* Footer */
+.footer { margin-top: 60px; color: #666; }
+
+/* ===========================
+   Small screens
+   =========================== */
+@media (max-width: 800px) {
+  .intro {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .intro-photo img {
+    width: 220px;
+    height: 220px;
+  }
+  name, h1 { font-size: 2rem; }
+  heading, h2 { font-size: 1.35rem; }
+}
+
+/* Old helpers retained */
 .one { width:160px; height:160px; position:relative; }
-.two { width:160px; height:160px; position:absolute; transition:opacity .2s ease-in-out; -moz-transition:opacity .2s ease-in-out; -webkit-transition:opacity .2s ease-in-out; }
-.fade { transition:opacity .2s ease-in-out; -moz-transition:opacity .2s ease-in-out; -webkit-transition:opacity .2s ease-in-out; }
-
+.two { width:160px; height:160px; position:absolute; transition:opacity .2s ease-in-out; }
+.fade { transition:opacity .2s ease-in-out; }
 span.highlight { background-color:#ffffd0; }
