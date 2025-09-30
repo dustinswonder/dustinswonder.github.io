@@ -24,6 +24,16 @@ heading {
   font-weight: 700;
 }
 
+name {
+  font-family: 'Roboto', sans-serif;
+  font-size: 28px;   /* was 32px */
+}
+
+heading {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;   /* was 22px */
+}
+
 /* latin-ext */
 @font-face {
   font-family: 'Lato';
