@@ -1,87 +1,144 @@
-/* ========= Typography ========= */
-html, body {
-  font-family: 'Roboto', system-ui, -apple-system, 'Segoe UI', Arial, Helvetica, sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
-  color: #111;
-  margin: 0;
-  padding: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* jost */
+@font-face{
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 400;
+  src:  local('Jost'), url(https://fonts.gstatic.com/s/jost/v15/S6u9w4BMUTPHh6UVSwaPGQ3q5d0N7w.woff2);
 }
 
-a { color: #1772d0; text-decoration: none; }
-a:hover, a:focus { color: #f09228; text-decoration: none; }
-
-/* FORCE Roboto Slab on headings to beat any old rules/caches */
-h1, h2, h3, h4, h5, h6,
-name, heading, papertitle {
-  font-family: 'Roboto Slab', 'Roboto', serif !important;
-  line-height: 1.25;
-  letter-spacing: 0.01em;
-  color: #111;
-  margin: 0 0 .6rem 0;
+/* latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v15/S6u8w4BMUTPHjxsAUi-qNiXg7eU0.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v15/S6u8w4BMUTPHjxsAXC-qNiXg7Q.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v15/S6u_w4BMUTPHjxsI5wq_FQftx9897sxZ.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v15/S6u_w4BMUTPHjxsI5wq_Gwftx9897g.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjxAwXiWtFCfQ7A.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjx4wXiWtFCc.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh6UVSwaPGQ3q5d0N7w.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh6UVSwiPGQ3q5d0.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-/* Sizes */
-name, h1 { font-size: 2.5rem; font-weight: 700; display: block; text-align: center; }
-heading, h2 { font-size: 1.8rem; font-weight: 700; display: block; margin-top: 2rem; text-align: center; }
-papertitle { font-size: 1rem; font-weight: 700; display: inline; }
-
-/* Paragraphs: readable left-aligned */
-p, td, th, tr, strong, em, span { font-family: inherit; font-size: 1rem; }
-
-/* Optional: slightly larger lead paragraphs under your name */
-.lead { font-size: 1.0625rem; }
-
-/* ========= Layout ========= */
-.wrap {
-  max-width: 1100px;
-  margin: 40px auto 80px;
-  padding: 0 24px;
+a {
+  color: #1772d0;
+  text-decoration: none;
 }
 
-.intro {
-  display: grid;
-  grid-template-columns: minmax(320px, 1.2fr) minmax(220px, 0.8fr);
-  gap: 40px;
-  align-items: start;
+a:focus,
+a:hover {
+  color: #f09228;
+  text-decoration: none;
 }
 
-/* Center the intro text block UNDER the name, but keep paragraph text left */
-.intro-text { max-width: 680px; margin: 0 auto; }
-.intro-text .links { margin-top: .75rem; text-align: center; }
-.sep { margin: 0 .5rem; color: #888; }
-
-/* Headshot */
-.intro-photo { display: flex; justify-content: center; align-items: flex-start; }
-.intro-photo img {
-  width: 280px;
-  height: 280px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 2px solid #e8e8e8;
+body,
+td,
+th,
+tr,
+p,
+a {
+  font-family: 'Jost', sans-serif;
+  /*font-family: 'Lato', Verdana, Helvetica, sans-serif;*/
+  font-size: 14px
 }
 
-/* Section content width and alignment */
-section > p { max-width: 780px; margin: 0.5rem auto 0; }
-
-/* Paper links bold */
-.paperlink a { font-weight: 700; }
-
-/* Footer */
-.footer { margin-top: 60px; color: #666; text-align: left; max-width: 780px; margin-left: auto; margin-right: auto; }
-
-/* ========= Mobile ========= */
-@media (max-width: 900px) {
-  .intro { grid-template-columns: 1fr; gap: 20px; }
-  .intro-photo img { width: 220px; height: 220px; }
-  name, h1 { font-size: 2.1rem; }
-  heading, h2 { font-size: 1.5rem; }
+strong {
+  font-family: 'Jost', sans-serif;
+  /*font-family: 'Lato', Verdana, Helvetica, sans-serif;*/
+  font-size: 14px;
 }
 
-/* Legacy helpers (safe to keep) */
-.one { width:160px; height:160px; position:relative; }
-.two { width:160px; height:160px; position:absolute; transition:opacity .2s ease-in-out; }
-.fade { transition:opacity .2s ease-in-out; }
-span.highlight { background-color:#ffffd0; }
+heading {
+  font-family: 'Jost', sans-serif;
+  /*font-family: 'Lato', Verdana, Helvetica, sans-serif;*/
+  font-size: 22px;
+}
+
+papertitle {
+  font-family: 'Jost', sans-serif;
+  /*font-family: 'Lato', Verdana, Helvetica, sans-serif;*/
+  font-size: 14px;
+  font-weight: 700
+}
+
+name {
+  font-family: 'Jost', sans-serif;
+  /*font-family: 'Lato', Verdana, Helvetica, sans-serif;*/
+  font-size: 32px;
+}
+
+.one {
+  width: 160px;
+  height: 160px;
+  position: relative;
+}
+
+.two {
+  width: 160px;
+  height: 160px;
+  position: absolute;
+  transition: opacity .2s ease-in-out;
+  -moz-transition: opacity .2s ease-in-out;
+  -webkit-transition: opacity .2s ease-in-out;
+}
+
+.fade {
+  transition: opacity .2s ease-in-out;
+  -moz-transition: opacity .2s ease-in-out;
+  -webkit-transition: opacity .2s ease-in-out;
+}
+
+span.highlight {
+  background-color: #ffffd0;
+}
