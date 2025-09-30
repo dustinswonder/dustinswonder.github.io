@@ -6,6 +6,24 @@
   src: local('Roboto'), url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Me4Ww.woff2) format('woff2');
 }
 
+/* ADD this next to your existing Roboto 400 face */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Bold'),
+       url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfBBc9.woff2) format('woff2');
+}
+
+/* Stop iOS Safari from auto-dimming in Dark Mode */
+:root { color-scheme: light; }
+
+/* Make headings explicitly bold so iOS uses the 700 face */
+name,
+heading {
+  font-weight: 700;
+}
+
 /* latin-ext */
 @font-face {
   font-family: 'Lato';
